@@ -1,0 +1,44 @@
+CAST EN C
+	- cast avec type
+	- cast implicite
+	c++ -Wconversion
+	Comportements differents:
+	- Conversion avec modifs des bits IMPLICITE = sans cast
+	- Conversion identitaire (reinterpretation) EXPLICITE = avec cast ()
+
+	Promotion = vers type moins precis (ex: float to void)
+	Demotion = vers type plus precis (ex: void to int)
+		Hasardeux en implicite
+		OK en explicite
+
+	Cas particulier de reinterpretation:
+		Cast de type qualifier (const ou volatile)
+		Demotion interdite en implicite (si c'est une variable const)
+
+CAST EN C++
+Downcast et Upcast sur hierarchie verticale de cast
+
+Static cast
+/* static_cast<type>(var); */
+
+Dynamic cast = cast a l'execution et non a la compilation comme les autres cast
+Utilisation du RTTI (run time type information) = au moins une fonction membre virtuelle
+Uniquement dans un downcast
+Dans le cas d'un downcast vers reference (et non pointeur), comme reference ne peut etre nul, ca leve une exception
+
+Reinterpret cast
+Le plus permissif
+
+Const cast
+cast pour qualifier
+Pas ouf ouf, vaut mieux corriger le code
+
+
+Cast operator:
+/* operator type() {} */
+Utilisee comme un cast implicite si definie dans la classe
+
+Explicit Keyword
+interdit une conversion implicite
+
+
