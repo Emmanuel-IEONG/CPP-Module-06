@@ -6,20 +6,22 @@
 #    By: eieong <eieong@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/05 15:16:59 by eieong            #+#    #+#              #
-#    Updated: 2025/12/05 15:20:25 by eieong           ###   ########.fr        #
+#    Updated: 2025/12/11 14:51:14 by eieong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -Wconversion -std=c++98 -MD
 INCLUDE = -I $(HEAD_DIR)
-NAME = 
+NAME = convert
 
 SRC_DIR = src/
 OBJ_DIR = obj/
 HEAD_DIR = include/
 
-SRC_FILES = main.cpp
+SRC_FILES = main.cpp \
+			ScalarConverter.cpp \
+			choosetype.cpp
 OBJ_FILES = $(SRC_FILES:.cpp=.o)
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))

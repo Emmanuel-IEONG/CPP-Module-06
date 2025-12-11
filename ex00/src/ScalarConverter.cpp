@@ -6,7 +6,7 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 14:58:22 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/09 17:48:09 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/11 14:52:59 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ ScalarConverter::ScalarConverter()
 ScalarConverter::ScalarConverter(ScalarConverter const & src)
 {
 	std::cout << "ScalarConverter Copy constructor called" << std::endl;
+	(void) src;
 }
 
 ScalarConverter::~ScalarConverter()
@@ -42,7 +43,8 @@ ScalarConverter &	ScalarConverter::operator=(ScalarConverter const & rhs)
 	stock le type puis convertit avec cast
  */
 
-void	ScalarConverter::convert(std::string str)
+void	ScalarConverter::convert(const std::string str)
 {
-	if ()
+	e_type	type = chooseType(str);
+	std::cout << type << std::endl;
 }
