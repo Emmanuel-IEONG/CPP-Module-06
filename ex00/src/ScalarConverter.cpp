@@ -6,7 +6,7 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 14:58:22 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/11 14:52:59 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/11 15:38:24 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,25 @@ ScalarConverter &	ScalarConverter::operator=(ScalarConverter const & rhs)
 void	ScalarConverter::convert(const std::string str)
 {
 	e_type	type = chooseType(str);
-	std::cout << type << std::endl;
+	switch(type)
+	{
+		case INVALID:
+			std::cout << "Invalid input" << std::endl;
+			break;
+		case SPECIAL:
+			// printSpecial(str);
+			break;
+		case CHAR:
+			// convertChar(str, len);
+			break;
+		case INT:
+			// convertInt(str);
+			break;
+		case FLOAT:
+			// convertFloat(str);
+			break;
+		case DOUBLE:
+			// convertDouble(str);
+			break;
+	}
 }
