@@ -6,7 +6,7 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 17:47:38 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/15 10:59:47 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/15 19:09:51 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 #include <iostream>
 #include <cstddef> // size_t
 #include <cctype> // isdigit
-
-// static void	printlog(std::string str)
-// {
-// 	std::cout << str << std::endl;
-// }
 
 static bool	check_double(const std::string str, std::size_t &dot, std::size_t &f)
 {
