@@ -6,7 +6,7 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 14:58:09 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/11 14:48:45 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/15 10:59:14 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@
 	};
 
 	e_type	chooseType(const std::string str);
-	
+	void	printSpecial(const std::string str);
+
 #endif
