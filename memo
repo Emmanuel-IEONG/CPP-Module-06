@@ -17,7 +17,8 @@ CAST EN C
 
 CAST EN C++
 Downcast et Upcast sur hierarchie verticale de cast
-
+Downcast = Animal -> Chien
+Upcast = Chien -> Animal
 Static cast
 /* static_cast<type>(var); */
 

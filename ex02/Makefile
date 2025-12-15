@@ -6,7 +6,7 @@
 #    By: eieong <eieong@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/15 14:44:50 by eieong            #+#    #+#              #
-#    Updated: 2025/12/15 14:45:01 by eieong           ###   ########.fr        #
+#    Updated: 2025/12/15 19:00:24 by eieong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRC_DIR = src/
 OBJ_DIR = obj/
 HEAD_DIR = include/
 
-SRC_FILES = main.cpp
+SRC_FILES = main.cpp \
+			Base.cpp
 OBJ_FILES = $(SRC_FILES:.cpp=.o)
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))

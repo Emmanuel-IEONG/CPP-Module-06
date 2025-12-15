@@ -6,13 +6,11 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 14:45:27 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/15 14:52:54 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/15 19:03:45 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Base.hpp"
 
 Base::~Base()
-{
-	std::cout << "Base Destructor called" << std::endl;
-}
+{}
