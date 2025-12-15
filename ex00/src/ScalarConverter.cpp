@@ -6,7 +6,7 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 14:58:22 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/15 11:24:49 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/15 12:36:26 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,6 @@ ScalarConverter &	ScalarConverter::operator=(ScalarConverter const & rhs)
 	return (*this);
 }
 
-/**
- * str ->	isInt = Only number
-			isFloat + isDouble = detection du '.', si 'f' -> float, sinon double
-			isChar = 0 < char < 127;
-
-	stock le type puis convertit avec cast
- */
-
 void	ScalarConverter::convert(const std::string str)
 {
 	e_type	type = chooseType(str);
@@ -62,10 +54,10 @@ void	ScalarConverter::convert(const std::string str)
 			convertInt(str);
 			break;
 		case FLOAT:
-			// convertFloat(str);
+			convertFloat(str);
 			break;
 		case DOUBLE:
-			// convertDouble(str);
+			convertDouble(str);
 			break;
 	}
 }
