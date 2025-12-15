@@ -6,11 +6,12 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 17:14:59 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/11 14:54:14 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/15 11:33:54 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ScalarConverter.hpp"
+#include <climits>
 
 int	main(int ac, char **av)
 {

@@ -6,7 +6,7 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 14:58:22 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/15 11:06:48 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/15 11:24:49 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	ScalarConverter::convert(const std::string str)
 	e_type	type = chooseType(str);
 	switch(type)
 	{
+		std::cout << type << std::endl;
 		case INVALID:
 			std::cout << "Invalid input" << std::endl;
 			break;
@@ -58,7 +59,7 @@ void	ScalarConverter::convert(const std::string str)
 			convertChar(str);
 			break;
 		case INT:
-			// convertInt(str);
+			convertInt(str);
 			break;
 		case FLOAT:
 			// convertFloat(str);

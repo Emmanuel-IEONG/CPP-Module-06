@@ -6,13 +6,38 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 14:47:34 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/15 11:13:33 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/15 11:49:52 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ScalarConverter.hpp"
 #include <string>
 #include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <climits>
+
+void	convertInt(const std::string str)
+{
+	long	nb = atol(str.c_str());
+
+	std::cout << "char: ";
+	if (nb >= 0 && nb <= 127)
+	{
+		if (isprint(static_cast<int>(nb)))
+			std::cout << "'" << static_cast<char>(nb) << "'" << std::endl;
+		else
+			std::cout << "Non displayable" << std::endl;
+	}
+	else
+		std::cout << "impossible" << std::endl;
+	if (nb >= INT_MIN && nb <= INT_MAX)
+		std::cout << "int: " << static_cast<int>(nb) << std::endl;
+	else
+		std::cout << "int: impossible" << std::endl;
+	std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(nb) << "f" << std::endl;
+	std::cout << "double: " << static_cast<double>(nb) << std::endl;
+}
 
 void	convertChar(const std::string str)
 {
