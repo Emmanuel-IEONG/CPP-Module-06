@@ -6,7 +6,7 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 14:47:34 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/15 12:43:01 by eieong           ###   ########.fr       */
+/*   Updated: 2025/12/29 11:49:27 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	convertDouble(const std::string str)
 		std::cout << "int: " << static_cast<int>(nb) << std::endl;
 	else
 		std::cout << "int: impossible" << std::endl;
-	std::cout << "float: " << std::fixed << std::setprecision(1) << nb << "f" << std::endl;
+	std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(nb) << "f" << std::endl;
 	std::cout << "double: " << static_cast<double>(nb) << std::endl;
 }
 
