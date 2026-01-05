@@ -6,13 +6,14 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 14:48:04 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/15 14:48:34 by eieong           ###   ########.fr       */
+/*   Updated: 2026/01/05 11:18:32 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef A_HPP
 	#define A_HPP
 	#include "Base.hpp"
+
 	class	A : public Base
 	{};
 

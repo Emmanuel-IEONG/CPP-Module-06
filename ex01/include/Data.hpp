@@ -6,7 +6,7 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 14:13:27 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/15 14:33:06 by eieong           ###   ########.fr       */
+/*   Updated: 2026/01/05 11:18:15 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@
 	};
 
 	std::ostream	&operator<<(std::ostream &out, Data &data);
+
 #endif
