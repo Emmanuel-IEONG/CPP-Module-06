@@ -6,7 +6,7 @@
 /*   By: eieong <eieong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 14:51:19 by eieong            #+#    #+#             */
-/*   Updated: 2025/12/15 19:05:44 by eieong           ###   ########.fr       */
+/*   Updated: 2026/01/05 11:32:45 by eieong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "../include/C.hpp"
 #include <iostream>
 #include <cstdlib>
+#define GEN_NB 5
 
 static void	print_type(std::string str)
 {
@@ -28,10 +29,13 @@ Base * generate(void)
 	switch (choose)
 	{
 		case 0:
+			print_type("A");
 			return (new A);
 		case 1:
+			print_type("B");
 			return (new B);
 		default:
+			print_type("C");
 			return (new C);
 	}
 }
@@ -44,6 +48,8 @@ void identify(Base* p)
 		print_type("B");
 	else if (dynamic_cast<C*>(p))
 		print_type("C");
+	else
+		std::cout << "Unknown type" << std::endl;
 }
 
 void identify(Base& p)
@@ -73,18 +79,19 @@ void identify(Base& p)
 
 int	main()
 {
-	Base*	ptr[10];
+	Base*	ptr[GEN_NB];
 
 	srand(time(NULL));
-	for (int i = 0; i < 10; i++)
+	std::cout << "------------------------ Generate Base pointer ------------------------" << std::endl;
+	for (int i = 0; i < GEN_NB; i++)
 		ptr[i] = generate();
 	std::cout << "------------------------ Identify pointer ------------------------" << std::endl;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < GEN_NB; i++)
 		identify(ptr[i]);
 	std::cout << "------------------------ Identify reference ------------------------" << std::endl;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < GEN_NB; i++)
 		identify(*ptr[i]);
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < GEN_NB; i++)
 		delete ptr[i];
 	return (0);
 }
